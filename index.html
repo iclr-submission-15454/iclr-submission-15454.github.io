@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Embodied-R1: Reinforced Embodied Reasoning for General Robotic Manipulation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+
+
+                        <h1 class="title is-1 publication-title">
+                          Embodied-R1: Reinforced Embodied Reasoning for General Robotic Manipulation
+                        </h1>
+                    </h3>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Links can be added here -->
+                                <span class="link-block">
+                                    <a target="_blank" href="https://github.com/iclr-submission-15454/Embodied-R1"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Overview. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3"><span class="dvima">Abstract</span></h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                        Generalization in embodied AI is hindered by the "seeing-to-doing gap", stemming from data scarcity and embodiment heterogeneity. To address this, we pioneer "pointing" as a unified, embodiment-agnostic intermediate representation, defining four core embodied pointing abilities that bridge high-level vision-language comprehension with low-level action primitives. We introduce <b>Embodied-R1</b>, a 3B Vision-Language Model (VLM) specifically designed for embodied reasoning and pointing. We train Embodied-R1 using a two-stage Reinforced Fine-tuning (RFT) curriculum with specialized multi-task reward design.
+                        Embodied-R1 achieves state-of-the-art performance on 11 embodied spatial and pointing benchmarks. Critically, it demonstrates robust zero-shot generalization by achieving a <b>56.2% success rate in the SIMPLEREnv</b> and <b>87.5% across 8 real-world XArm tasks</b> without any task-specific fine-tuning, representing a 62% improvement over strong baselines. Furthermore, the model exhibits high robustness against diverse visual disturbances. Our work shows that a pointing-centric representation, combined with an RFT training paradigm, offers an effective and generalizable pathway to closing the perception-action gap in robotics.
+                        </p>
+                    </div>
+
+                    <div class="columns is-centered">
+                        <div class="column">
+                          <div class="content">
+                          <p style="text-align:center;">
+                          <img src="assets/images/r1_framework_readme.jpg" width="100%" alt="Embodied-R1 Framework">
+                          <br>
+                          <b>Overview of Embodied-R1 Framework.</b> Embodied-R1 is a 3B vision-language model (VLM) designed for general robotic manipulation. Through an innovative "Pointing" mechanism and Reinforced Fine-tuning (RFT) training methodology, it effectively bridges the "seeing-to-doing" gap in robotics, achieving remarkable zero-shot generalization capabilities.
+                          <br>
+                      </p>
+                          <br>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+          <div class="rows">
+              <div class="rows is-centered ">
+                <h2 class="title is-3"><span class="dvima">Results</span></h2>
+
+                  <!-- Real-world Robot Manipulation Videos -->
+                <h3 class="title is-4"><span class="dvima">Real-world Robot Manipulation Demonstrations</span></h3>
+
+                    <span style="font-size: 125%">Embodied-R1 demonstrates superior performance in real-world robot manipulation tasks, achieving an <b>87.5% success rate</b> across 8 diverse tasks in a zero-shot setting. Below are visualizations of the model performing these tasks.</span>
+                    <br>
+                    <br>
+
+                  <!-- Real-world experimental evaluation results -->
+                  <div class="columns is-centered">
+                    <div class="column">
+                      <div class="content">
+                        <p style="text-align:center;">
+                        <img src="assets/images/real-robot-web.jpg" width="100%" alt="Real-world experimental evaluation results">
+                        <br>
+                        <b>Real-world experimental evaluation results.</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- First row of videos -->
+                  <div class="columns is-centered">
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/1.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 1: Pick up the strawberry</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/2.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 2: Move the egg to the bowl</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/3.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 3: Move the vise to the red basket</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/4.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 4: Place the fork in the green bin</b></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Second row of videos -->
+                  <div class="columns is-centered">
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/5.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 5: Pick the [x] toothbrush and place it to the bucket</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/6.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 6: Move the nearest object to the right side of the drawer</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/7.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 7: Put the screwdriver between drawer and the vase</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/8.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Task 8: Move the moka pot to the right of drawer</b></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br>
+
+
+                  <!-- Visualization of Embodied-R1's Performance -->
+                  <br>
+                  <h3 class="title is-4"><span class="dvima">Visualization of Performance on Various Pointing Tasks</span></h3>
+                  <div class="columns is-centered">
+                    <div class="column">
+                      <div class="content">
+                        <p style="text-align:center;">
+                        <img src="assets/images/visualization-web.jpg" width="100%" alt="Embodied-R1 Visualization">
+                        <br>
+                        <b>Visualizing Embodied-R1's Performance on Various Pointing Tasks.</b> The model can follow diverse text instructions and generalize its capabilities to novel, unseen environments.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Additional Visualization -->
+                  <div class="columns is-centered">
+                    <div class="column">
+                      <div class="content">
+                        <p style="text-align:center;">
+                        <img src="assets/images/WeChat7ee0a482513f8b9fcaf894808c5c7c3a.jpg" width="100%" alt="Additional Embodied-R1 Results">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <br>
+                  <h3 class="title is-4"><span class="dvima">Robustness to Visual Disturbances</span></h3>
+                  
+                  <!-- Visual disturbance evaluation results -->
+                  <div class="columns is-centered">
+                    <div class="column">
+                      <div class="content">
+                        <p style="text-align:center;">
+                        <img src="assets/images/visual_di.jpg" width="100%" alt="Visual Disturbance Results">
+                        <br>
+                        <b>Embodied-R1's performance under different visual disturbance conditions.</b> The model maintains 100% success rate under original conditions and background changes, with 83% success rate under combined background, light, and height changes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Visual disturbance experiment videos -->
+                  <div class="columns is-centered">
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/11.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Original</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/12.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Background Change</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/13.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Background+Light Change</b></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="column is-one-quarter" style="padding-left: 2px; padding-right: 2px;">
+                      <div class="content">
+                        <video width="100%" controls loop muted autoplay>
+                          <source src="videos/14.mp4" type="video/mp4">
+                        </video>
+                        <p style="text-align:center;">
+                          <span><b>Background+Light+Height Change</b></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="columns is-centered">
+                    <div class="column">
+                      <div class="content">
+                        <p style="text-align:center;">
+                        <b>The process of Embodied-R1 performing Task 6 under different visual disturbances.</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="content has-text-centered">
+                        <p>
+                            Website template borrowed from <a
+                                href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
+                                href="https://eureka-research.github.io/">Eureka</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
